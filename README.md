@@ -15,7 +15,7 @@ It adds:
 
 ```bash
 mkdir -p ~/.config/muxy/extensions
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/muxy-web-browser-extension.git ~/.config/muxy/extensions/Web-Browser
+git clone https://github.com/Hude06/muxy-web-browser-extension.git ~/.config/muxy/extensions/Web-Browser
 chmod +x ~/.config/muxy/extensions/Web-Browser/run.sh
 ```
 
