@@ -1,0 +1,38 @@
+{
+  "name": "Web-Browser",
+  "version": "0.1.0",
+  "description": "Web browser tab with a right-side status bar launcher.",
+  "entrypoint": "run.sh",
+  "permissions": [],
+  "events": [],
+  "tabTypes": [
+    {
+      "id": "web-browser",
+      "title": "Web Browser",
+      "entry": "tabs/browser.html"
+    }
+  ],
+  "commands": [
+    {
+      "id": "open-web-browser",
+      "title": "Web Browser: Open",
+      "subtitle": "Open web browser tab",
+      "action": {
+        "kind": "openTab",
+        "tabType": "web-browser"
+      }
+    }
+  ],
+  "statusBarItems": [
+    {
+      "id": "web-browser",
+      "icon": {
+        "symbol": "globe"
+      },
+      "text": "Browser",
+      "tooltip": "Open Web Browser",
+      "side": "right",
+      "command": "open-web-browser"
+    }
+  ]
+}

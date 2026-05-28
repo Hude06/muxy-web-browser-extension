@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font: 13px -apple-system, "SF Pro", system-ui, sans-serif;
+  background: var(--muxy-background);
+  color: var(--muxy-foreground);
+  overflow: hidden;
+}
+
+.browser-app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 3px;
+  padding: 4px 6px;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 2px;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-btn {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--muxy-foreground-muted);
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: var(--muxy-hover);
+  color: var(--muxy-foreground);
+}
+
+.nav-btn:focus-visible {
+  outline: none;
+  background: var(--muxy-hover);
+  box-shadow: 0 0 0 2px var(--muxy-accent-soft);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.url-form {
+  width: 100%;
+}
+
+#url-input {
+  width: 100%;
+  height: 27px;
+  border: 1px solid var(--muxy-border);
+  border-radius: 8px;
+  background: var(--muxy-surface);
+  color: var(--muxy-foreground);
+  padding: 0 8px;
+  font: 500 10px -apple-system, "SF Pro", system-ui, sans-serif;
+}
+
+#url-input::placeholder {
+  color: var(--muxy-foreground-muted);
+  opacity: 0.9;
+}
+
+#url-input:focus-visible {
+  outline: none;
+  border-color: var(--muxy-accent);
+  box-shadow: 0 0 0 2px var(--muxy-accent);
+}
+
+.viewport {
+  min-height: 0;
+  overflow: hidden;
+  background: var(--muxy-background);
+}
+
+#browser-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--muxy-background);
+  display: none;
+}
+
+#browser-frame.is-visible {
+  display: block;
+}
+
+@media (max-width: 620px) {
+  .browser-app {
+    padding: 4px;
+  }
+
+  .nav-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
